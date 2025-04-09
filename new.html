@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EazySpot</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #ebf8ff, #ffffff);
+      color: #2d3748;
+      padding: 1.5rem;
+    }
+
+    section {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    button {
+      background-color: #2563eb;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: #4a5568;
+    }
+
+    .card-icon {
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <main id="app"></main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const app = document.getElementById("app");
+      app.innerHTML = `
+        <section>
+          <h1 class="text-4xl font-bold">EazySpot: Your Smart Parking Assistant</h1>
+          <p class="text-lg text-gray-600">Reinventing urban parking with AI, IoT, and real-time convenience.</p>
+          <button>Get Started</button>
+        </section>
+
+        <section class="grid">
+          <div class="card">
+            <div class="card-icon" style="color: #2563eb;">📍</div>
+            <h2>Real-Time Parking Navigation</h2>
+            <p>Navigate to vacant spots easily with our AI-powered, real-time tracking system.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon" style="color: #16a34a;">⚡</div>
+            <h2>EV Charging Integration</h2>
+            <p>Support sustainable mobility with built-in EV charging stations at your parking spot.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon" style="color: #facc15;">🚗</div>
+            <h2>On-Demand Car Wash</h2>
+            <p>Book a car wash while you park—convenient, fast, and eco-friendly service.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon" style="color: #ef4444;">🛡️</div>
+            <h2>Vehicle Security Alerts</h2>
+            <p>Our sensors monitor and alert you in real-time for any unusual activity.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-3xl font-bold">Transforming Urban Life</h2>
+          <p class="text-lg text-gray-700">EazySpot helps reduce traffic congestion and promote greener, smarter cities.</p>
+          <button>Join the Future of Parking</button>
+        </section>
+      `;
+    });
+  </script>
+</body>
+</html>
